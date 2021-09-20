@@ -1,0 +1,12 @@
+{
+  "name": "express-dry-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "drytypes": "^0.4.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
