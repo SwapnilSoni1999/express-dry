@@ -3,9 +3,9 @@ const dry = require('drytypes')
 module.exports = (schema) => {
     const drySchema = {}
     for (const key in schema) {
-        const { type, optional } = schema[key]
+        const { type, required } = schema[key]
         drySchema[key] = dry[type.name]
-        if (optional) {
+        if (required) {
             drySchema[key].union(dry.Undefined)
         }
     }
