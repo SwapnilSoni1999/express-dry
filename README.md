@@ -21,7 +21,7 @@ const router = Router()
 
 router.post('/login', dry.body({
   username: { type: String },
-  passowrd: { type: String },
+  password: { type: String },
   foo: { type: Boolean, required: false }
 }, async (req, res) => {})
 
