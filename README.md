@@ -22,7 +22,7 @@ const router = Router()
 router.post('/login', dry.body({
   username: { type: String },
   passowrd: { type: String },
-  foo: { type: Boolean, optional: false }
+  foo: { type: Boolean, required: false }
 }, async (req, res) => {})
 
 module.exports = router
@@ -31,7 +31,7 @@ After this the `.body` will return a middleware with packed automatic validation
 
 ## Features
 - All Javascript supported primitives
-- optional payload validation
+- optional payload validation with `required: false`
 - Will be adding more custom validations such as Email, MongoObjectId and many more :)
 
 ## Credits
