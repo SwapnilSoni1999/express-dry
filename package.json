@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": {
+    "name": "Swapnil Soni",
+    "email": "swapnil.soni12345@gmail.com"
+  },
+  "contributors": ["uditkarode"],
   "dependencies": {
     "drytypes": "^0.4.0"
   },
