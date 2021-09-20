@@ -1,12 +1,22 @@
 {
   "name": "express-dry",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
+  "description": "A simple express.js lightweight body, params and query validator.",
   "license": "MIT",
   "author": {
     "name": "Swapnil Soni",
     "email": "swapnil.soni12345@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwapnilSoni1999/express-dry.git"
+  },
+  "keywords": [
+    "expressjs",
+    "validator",
+    "express validator"
+  ],
   "contributors": ["uditkarode"],
   "dependencies": {
     "drytypes": "^0.4.0"
