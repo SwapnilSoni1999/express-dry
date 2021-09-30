@@ -9,6 +9,6 @@ module.exports = dry.makeDryType((x) => {
         return { success: false, message: 'Invalid PAN Number!' }
     }
   
-    return { success: true }
-  
+    return { success: true,message: "Valid PAN number" }
+    
 }, 'PAN')

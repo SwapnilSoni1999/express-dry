@@ -12,6 +12,6 @@ module.exports = dry.makeDryType((x) => {
         return { success: false, message: 'Invalid Driving License!' }
     }
   
-    return { success: true }
+    return { success: true , message: "Valid Driving License!"}
   
 }, 'DrivingLicense')
