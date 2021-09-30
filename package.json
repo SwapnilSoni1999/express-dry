@@ -24,7 +24,8 @@
     "uditkarode"
   ],
   "dependencies": {
-    "drytypes": "^0.4.0"
+    "drytypes": "^0.4.0",
+    "express-dry": "^1.0.4"
   },
   "devDependencies": {
     "axios": "^0.21.4",
