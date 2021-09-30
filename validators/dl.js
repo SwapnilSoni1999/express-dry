@@ -12,4 +12,4 @@ module.exports = dry.makeDryType((x) => {
 
     return { success: true, message:'You Have Entered Valid DL Number!' }
 
-}, 'DL_NO')
+}, 'DRIVING_LC_IN')
