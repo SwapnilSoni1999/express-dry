@@ -5,7 +5,7 @@ module.exports = dry.makeDryType((x) => {
         return { success: false, message: 'Invalid ObjectId!' }
     }
     const result = new Date(parseInt(x.substring(0, 8), 16) * 1000)
-    if (result === 'Invalid Date') {
+    if (result == 'Invalid Date') {
         return { success: false, message: 'Invalid ObjectId!' }
     }
     return { success: true }
