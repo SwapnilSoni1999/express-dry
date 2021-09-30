@@ -6,7 +6,7 @@ const uuid = {
 };
 
 module.exports = dry.makeDryType((x, v = 'combined') => {
-	if (typeof x === 'string' || x instanceof String) {
+	if (typeof x !== 'string' || !x instanceof String) {
 		return {
 			success: false,
 			message: 'Invalid uuid!. uuid should be a string',
@@ -14,14 +14,12 @@ module.exports = dry.makeDryType((x, v = 'combined') => {
 	}
 	const pattern = uuid[v];
 	if (pattern) {
-		const isUuid = pattern.test(x);
-		if (isUuid) {
-			return { success: true };
-		} else {
+		if (!pattern.test(x)) {
 			return {
 				success: false,
 				message: 'Invalid uuid!',
 			};
 		}
+		return { success: true };
 	}
 }, 'uuid');
