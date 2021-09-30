@@ -1,5 +1,7 @@
-const ObjectId = require('./validators/objectid')
+const ObjectId = require('./validators/objectid');
+const uuid = require('./validators/uuid');
 
 module.exports = {
-    ObjectId
-}
+	ObjectId,
+	uuid,
+};
