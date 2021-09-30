@@ -5,7 +5,7 @@ module.exports = dry.makeDryType((x) => {
         return { success: false, message: 'Aadhaar number should either be a String or a Number!' }
     }
     
-        x = x.toString()
+    x = x.toString()
     if (x.length < 12) {
         return { success: false, message: 'Aadhaar number must be a 12 digit number!')
     }
