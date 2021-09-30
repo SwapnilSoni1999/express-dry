@@ -7,6 +7,6 @@ module.exports = {
 	EmailAddress,
 	uuid,
 	PAN_IN,
-	AadhaarNumber
+	AadhaarNumber,
 	
 };
