@@ -6,4 +6,7 @@ module.exports = {
 	ObjectId,
 	EmailAddress,
 	uuid,
+	PAN_IN,
+	AadhaarNumber
+	
 };
