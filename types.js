@@ -11,5 +11,5 @@ module.exports = {
 	uuid,
 	PAN_IN,
 	AadhaarNumber,
-	DL_NO
+	DRIVING_LC_IN,
 };
