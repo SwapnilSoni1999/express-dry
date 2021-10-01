@@ -12,16 +12,24 @@
     "type": "git",
     "url": "git+https://github.com/SwapnilSoni1999/express-dry.git"
   },
+  "scripts": {
+    "test": "jest tests/validators.test"
+  },
   "keywords": [
     "expressjs",
     "validator",
     "express validator"
   ],
-  "contributors": ["uditkarode"],
+  "contributors": [
+    "uditkarode"
+  ],
   "dependencies": {
     "drytypes": "^0.4.0"
   },
   "devDependencies": {
-    "express": "^4.17.1"
+    "axios": "^0.21.4",
+    "express": "^4.17.1",
+    "jest": "^27.2.4",
+    "supertest": "^6.1.6"
   }
 }

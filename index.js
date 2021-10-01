@@ -1,13 +1,7 @@
 const buildDrySchema = require('./helpers/buildDrySchema')
 const getValidator = require('./helpers/getValidator')
 const getMiddleware = require('./helpers/getMiddleware')
-
-const ObjectId = require('./validators/objectid')
-
-
-const Types = {
-    ObjectId
-}
+const Types = require('./types')
 
 module.exports = {
     body: (schema, options={ allowExtraKeys: false, statusCode: 400 }) => {
