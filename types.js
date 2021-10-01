@@ -3,6 +3,7 @@ const uuid = require('./validators/uuid');
 const EmailAddress = require('./validators/email');
 const PAN_IN = require('./validators/');
 const AadhaarNumber = require('./validators/Aadhaar_IN.js');
+const DrivingLC_IN = require('./validators/DRIVING_LC_IN');
 const SSN = require('./validators/ssn.js');
 
 module.exports = {
