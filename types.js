@@ -15,5 +15,5 @@ module.exports = {
 	AadhaarNumber,
 	DrivingLC_IN,
 	Passport,
-  SSN_US,
+  	SSN_US,
 };
