@@ -5,7 +5,7 @@ module.exports = dry.makeDryType((x) => {
         return { success: false, message: 'Social Insurance Number should be string!' }
     }
 
-    let sinRegex = ^(\d{3}-\d{3}-\d{3})|(\d{9})$;
+    const sinRegex = ^(\d{3}-\d{3}-\d{3})|(\d{9})$;
     if (!x.match(sinRegex)) {
         return { success: false, message: 'Invalid SIN!, Please Recheck the SIN!' }
     }
