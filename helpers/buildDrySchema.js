@@ -1,5 +1,6 @@
 const dry = require('drytypes')
 const Types = require('../types')
+const optional = require('../utils/optional')
 
 module.exports = (schema) => {
     const drySchema = {}
@@ -17,9 +18,8 @@ module.exports = (schema) => {
             drySchema[key] = drySchema[key].intersect(dry.NumberLesserThan(max))
         }
         if (!required) {
-            drySchema[key].union(dry.Undefined)
+            drySchema[key] = optional(drySchema[key])
         }
     }
-    console.log('schema', drySchema)
     return drySchema
 }
