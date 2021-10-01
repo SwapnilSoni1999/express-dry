@@ -8,7 +8,7 @@ module.exports = dry.makeDryType((x) => {
         }
     }
 
-    let passportRegex = /^(?!^0+$)[a-zA-Z0-9]{6,9}$/;
+    const passportRegex = /^(?!^0+$)[a-zA-Z0-9]{6,9}$/;
     if (!x.match(passportRegex)) {
         return {
             success: false,
@@ -20,4 +20,4 @@ module.exports = dry.makeDryType((x) => {
         success: true,
         message: "You Have Entered Valid Passport Number!!"
     }
-}, 'passport')
+}, 'Passport')
