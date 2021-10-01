@@ -12,7 +12,7 @@ for (const config of routeConfigs) {
         return
     })
 
-    if (!config.payload?.valid) {
+    if (config.payload?.valid) {
         test(`${config.path.slice(1)} - Valid Inputs`, async () => {
             const res = await supertest(app)
                 .post(config.path)

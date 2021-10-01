@@ -67,6 +67,20 @@ const routeConfigs = [
                 data: 'kek'
             }
         }
+    },
+    {
+        path: '/number',
+        middleware: dry.body({
+            data: { type: Number, min: 10, max: 15 }
+        }),
+        payload: {
+            valid: {
+                data: 11
+            },
+            invalid: {
+                data: 9
+            }
+        }
     }
 ]
 
