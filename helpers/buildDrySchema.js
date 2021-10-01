@@ -1,5 +1,6 @@
 const dry = require('drytypes')
 const Types = require('../types')
+const optional = require('../utils/optional')
 
 module.exports = (schema) => {
     const drySchema = {}
@@ -11,7 +12,7 @@ module.exports = (schema) => {
             drySchema[key] = Types[type.tag]
         }
         if (!required) {
-            drySchema[key].union(dry.Undefined)
+            drySchema[key] = optional(drySchema[key])
         }
     }
     return drySchema
