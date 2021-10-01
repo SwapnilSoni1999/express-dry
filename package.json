@@ -13,7 +13,7 @@
     "url": "git+https://github.com/SwapnilSoni1999/express-dry.git"
   },
   "scripts": {
-    "test": "jest tests/server.test"
+    "test": "jest tests/validators.test"
   },
   "keywords": [
     "expressjs",
