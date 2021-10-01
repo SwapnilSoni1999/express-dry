@@ -81,6 +81,34 @@ const routeConfigs = [
                 data: 9
             }
         }
+    },
+    {
+        path: '/string',
+        middleware: dry.body({
+            data: { type: String, minLength: 10, maxLength: 20 }
+        }),
+        payload: {
+            valid: {
+                data: "Hello world"
+            },
+            invalid: {
+                data: "Hi"
+            }
+        }
+    },
+    {
+        path: '/array',
+        middleware: dry.body({
+            data: { type: Array, minLength: 2, maxLength: 5 }
+        }),
+        payload: {
+            valid: {
+                data: [1,2,3]
+            },
+            invalid: {
+                data: [1]
+            }
+        }
     }
 ]
 
