@@ -13,5 +13,5 @@ module.exports = {
 	PAN_IN,
 	AadhaarNumber,
 	DrivingLC_IN,
-	SSN,
+  SSN,
 };
