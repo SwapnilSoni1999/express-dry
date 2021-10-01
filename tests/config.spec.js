@@ -13,6 +13,34 @@ const routeConfigs = [
         }
     },
     {
+        path: '/gst',
+        middleware: dry.body({
+            data: { type: dry.Types.GST_IN }
+        }),
+        payload: {
+            valid: {
+                data: '27AAPFU0939F1ZV'
+            },
+            invalid: {
+                data: '23AA2FU0939F1ZV'
+            }
+        }
+    },
+    {
+        path: '/voterid',
+        middleware: dry.body({
+            data: { type: dry.Types.VoterID_IN }
+        }),
+        payload: {
+            valid: {
+                data: 'GDN0225185'
+            },
+            invalid: {
+                data: '23N0225185'
+            }
+        }
+    },
+    {
         path: '/email',
         middleware: dry.body({
             data: { type: dry.Types.EmailAddress }
