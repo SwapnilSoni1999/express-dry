@@ -14,6 +14,5 @@ module.exports = (schema) => {
             drySchema[key].union(dry.Undefined)
         }
     }
-    console.log('schema', drySchema)
     return drySchema
 }
