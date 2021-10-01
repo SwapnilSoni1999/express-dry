@@ -8,8 +8,8 @@ module.exports = dry.makeDryType((x) => {
         }
     }
 
-    let panRegex = /^(?!^0+$)[a-zA-Z0-9]{6,9}$/;
-    if (!x.match(panRegex)) {
+    let passportRegex = /^(?!^0+$)[a-zA-Z0-9]{6,9}$/;
+    if (!x.match(passportRegex)) {
         return {
             success: false,
             message: 'Invalid PAN Card number!, Recheck the number please!!' 
