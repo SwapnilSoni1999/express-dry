@@ -12,7 +12,7 @@ module.exports = dry.makeDryType((x) => {
     if (!x.match(passportRegex)) {
         return {
             success: false,
-            message: 'Invalid PAN Card number!, Recheck the number please!!' 
+            message: 'Invalid Passport number!, Recheck the number please!!' 
         }
     }
 
