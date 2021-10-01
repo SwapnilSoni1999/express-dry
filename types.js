@@ -6,6 +6,7 @@ const AadhaarNumber = require('./validators/Aadhaar_IN');
 const DrivingLC_IN = require('./validators/DRIVING_LC_IN');
 const Passport = require('./validators/passport');
 const SSN_US = require('./validators/SSN_US');
+const phone_IN = require('./validators/phone_IN');
 
 module.exports = {
 	ObjectId,
@@ -16,4 +17,5 @@ module.exports = {
 	DrivingLC_IN,
 	Passport,
   	SSN_US,
+	Phone_IN
 };
