@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.use('/test1', dry.body({
-    name: { type: String, required: true },
-    age: { type: Number, required: true }
+    name: { type: String, required: true,  },
+    age: { type: Number, required: true, min: 20, max: 40 }
 }), (req, res) => {
     res.json(req.body)
 })
@@ -48,6 +48,13 @@ makeRequest({ name: 'Swapnil', age: 21 }, 1).then(data => {
 })
 
 //Invalid
+makeRequest({ name: 'Swapnil', age: 19 }, 1).then(data => {
+    console.log(data)
+}).catch(err => {
+    console.log(err.response.data)
+})
+
+//Invalid
 makeRequest({ name: 21, age: 21 }, 1).then(data => {
     console.log(data)
 }).catch(err => {
@@ -57,5 +64,5 @@ makeRequest({ name: 21, age: 21 }, 1).then(data => {
 makeRequest({ id: 'xyz' }, 2).then(data => console.log(data))
     .catch(err => console.log(err.response.data))
 
-// Global End
+// // Global End
 .then(() => server.close())
