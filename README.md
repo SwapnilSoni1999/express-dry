@@ -36,6 +36,14 @@ dry.params({ id: { type: Number } }, { allowExtraKeys: false })
 dry.query({ search: { type: String, required: false } }, { allowExtraKeys: true, statusCode: 200 })
 ```
 
+## Complete Example
+router.post('/login', dry.body({
+  name: { type: String },
+  age: { type: Number, min: 18, max: 35 },
+  password: { type: String, minLength: 8, maxLength: 20 },
+  consent: { type: Boolean, required: false }
+}, { allowExtraKeys: false }), async (req, res) => {})
+
 ## Features
 - All Javascript supported primitives
 - optional payload validation with `required: false`
