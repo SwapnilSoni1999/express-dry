@@ -97,6 +97,20 @@ const routeConfigs = [
         }
     },
     {
+        path: '/hexcolor',
+        middleware: dry.body({
+            data: { type: dry.Types.HexColor }
+        }),
+        payload: {
+            valid: {
+                data: '#FFFFFF80'
+            },
+            invalid: {
+                data: 'helo'
+            }
+        }
+    },
+    {
         path: '/number',
         middleware: dry.body({
             data: { type: Number, min: 10, max: 15 }
