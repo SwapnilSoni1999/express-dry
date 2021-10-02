@@ -37,12 +37,14 @@ dry.query({ search: { type: String, required: false } }, { allowExtraKeys: true,
 ```
 
 ## Complete Example
+```js
 router.post('/login', dry.body({
   name: { type: String },
   age: { type: Number, min: 18, max: 35 },
   password: { type: String, minLength: 8, maxLength: 20 },
   consent: { type: Boolean, required: false }
 }, { allowExtraKeys: false }), async (req, res) => {})
+```
 
 ## Features
 - All Javascript supported primitives
