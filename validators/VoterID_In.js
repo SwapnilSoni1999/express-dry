@@ -7,7 +7,7 @@ module.exports = dry.makeDryType((x) => {
     
    
     if (x.length < 10) {
-        return { success: false, message: 'VoterID number must be a 10 digit number!')
+        return { success: false, message: 'VoterID number must be a 10 digit number!'}
     }
 
     const VOTER_ID_REGEX = /^([a-zA-Z]){3}([0-9]){7}?$/;
