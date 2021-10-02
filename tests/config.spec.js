@@ -107,6 +107,16 @@ const routeConfigs = [
             },
             invalid: {
                 data: 'A12345678'
+        path: '/hexcolor',
+        middleware: dry.body({
+            data: { type: dry.Types.HexColor }
+        }),
+        payload: {
+            valid: {
+                data: '#FFFFFF80'
+            },
+            invalid: {
+                data: 'helo'
             }
         }
     },

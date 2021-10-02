@@ -9,6 +9,7 @@ const GST_IN=require('./validators/GST_IN');
 const VoterID_IN=require('./validators/VoterID_IN');
 const Passport = require('./validators/passport');
 const SSN_US = require('./validators/SSN_US');
+const HexColor = require('./validators/HexColor')
 
 module.exports = {
 	ObjectId,
@@ -23,4 +24,5 @@ module.exports = {
 	VoterID_IN,
 	Passport,
   SSN_US,
+  	HexColor,
 };
