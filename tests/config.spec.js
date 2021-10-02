@@ -97,6 +97,20 @@ const routeConfigs = [
         }
     },
     {
+        path: '/sin_ca',
+        middleware: dry.body({
+            data: { type: dry.Types.SIN_CA }
+        }),
+        payload: {
+            valid: {
+                data: '130 692 544'
+            },
+            invalid: {
+                data: 'A12345678'
+            }
+        }
+    },
+    {
         path: '/number',
         middleware: dry.body({
             data: { type: Number, min: 10, max: 15 }
