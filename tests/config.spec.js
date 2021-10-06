@@ -13,6 +13,34 @@ const routeConfigs = [
         }
     },
     {
+        path: '/gst',
+        middleware: dry.body({
+            data: { type: dry.Types.GST_IN }
+        }),
+        payload: {
+            valid: {
+                data: '27AAPFU0939F1ZV'
+            },
+            invalid: {
+                data: '23AA2FU0939F1ZV'
+            }
+        }
+    },
+    {
+        path: '/voterid',
+        middleware: dry.body({
+            data: { type: dry.Types.VoterID_IN }
+        }),
+        payload: {
+            valid: {
+                data: 'GDN0225185'
+            },
+            invalid: {
+                data: '23N0225185'
+            }
+        }
+    },
+    {
         path: '/email',
         middleware: dry.body({
             data: { type: dry.Types.EmailAddress }
@@ -69,6 +97,20 @@ const routeConfigs = [
         }
     },
     {
+        path: '/hexcolor',
+        middleware: dry.body({
+            data: { type: dry.Types.HexColor }
+        }),
+        payload: {
+            valid: {
+                data: '#FFFFFF80'
+            },
+            invalid: {
+                data: 'helo'
+            }
+        }
+    },
+    {
         path: '/number',
         middleware: dry.body({
             data: { type: Number, min: 10, max: 15 }
@@ -79,6 +121,34 @@ const routeConfigs = [
             },
             invalid: {
                 data: 9
+            }
+        }
+    },
+    {
+        path: '/string',
+        middleware: dry.body({
+            data: { type: String, minLength: 10, maxLength: 20 }
+        }),
+        payload: {
+            valid: {
+                data: "Hello world"
+            },
+            invalid: {
+                data: "Hi"
+            }
+        }
+    },
+    {
+        path: '/array',
+        middleware: dry.body({
+            data: { type: Array, minLength: 2, maxLength: 5 }
+        }),
+        payload: {
+            valid: {
+                data: [1,2,3]
+            },
+            invalid: {
+                data: [1]
             }
         }
     }
