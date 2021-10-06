@@ -1,6 +1,6 @@
 {
   "name": "express-dry",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "description": "A simple express.js lightweight body, params and query validator.",
   "license": "MIT",
