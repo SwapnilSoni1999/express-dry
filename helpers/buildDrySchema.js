@@ -14,10 +14,10 @@ module.exports = (schema) => {
         if(min) {
             drySchema[key] = drySchema[key].intersect(dry.NumberGreaterThan(min))
         }
-        if(max) { 
+        if(max) {
             drySchema[key] = drySchema[key].intersect(dry.NumberLesserThan(max))
         }
-        if (!required) {
+        if (required === false) {
             drySchema[key] = optional(drySchema[key])
         }
     }

@@ -4,7 +4,7 @@ const routeConfigs = [
     {
         path: '/aadhar',
         middleware: dry.body({
-            data: { type: dry.Types.AadhaarNumber }
+            data: { type: dry.Types.AadhaarNumber, required: true }
         }),
         payload: {
             invalid: {
