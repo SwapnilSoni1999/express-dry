@@ -4,11 +4,21 @@ const optional = require('../utils/optional')
 const minLengthDry = require('../utils/minLength')
 const maxLengthDry = require('../utils/maxLength')
 
-module.exports = (schema) => {
+const buildDrySchema = (schema) => {
     const drySchema = {}
     const customTypes = Object.keys(Types)
     for (const key in schema) {
         const { type, required, min, max, minLength, maxLength } = schema[key]
+
+        if (schema[key].type === undefined && typeof schema[key] === "object") {
+            if (!Array.isArray(schema[key])) {
+                drySchema[key] = buildDrySchema(schema[key]);
+            } else {
+                drySchema[key] = [buildDrySchema(schema[key][0])];
+            }
+            continue;
+        }
+
         drySchema[key] = dry[type.name]
         if (customTypes.includes(type.tag)) {
             drySchema[key] = Types[type.tag]
@@ -31,3 +41,5 @@ module.exports = (schema) => {
     }
     return drySchema
 }
+
+module.exports = buildDrySchema
