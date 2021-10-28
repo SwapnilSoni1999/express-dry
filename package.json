@@ -1,6 +1,6 @@
 {
   "name": "@epicx/express-dry",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "index.js",
   "description": "A simple express.js lightweight body, params and query validator.",
   "license": "MIT",
