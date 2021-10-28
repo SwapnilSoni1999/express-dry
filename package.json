@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SwapnilSoni1999/express-dry.git"
+    "url": "git+https://github.com/epicX67/express-dry.git"
   },
   "scripts": {
     "test": "jest tests/validators.test"
