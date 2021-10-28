@@ -46,10 +46,33 @@ router.post('/login', dry.body({
 }, { allowExtraKeys: false }), async (req, res) => {})
 ```
 
+## Nest Object Example
+Nested objects only supports on **dry.body({})**
+
+```js
+router.post('/test', dry.body({
+  name: { type: String },
+  infos: {
+    manager: { type: String },
+    classes: [
+      {
+        students: [
+          {
+            name: { type: String },
+            roll: { type: Number },
+          },
+        ],
+      },
+    ],
+  },
+}, { allowExtraKeys: false }), async (req, res) => {})
+```
+
 ## Features
 - All Javascript supported primitives
 - optional payload validation with `required: false`
 - Will be adding more custom validations such as Email, MongoObjectId and many more :)
+- Nested objects or arrays are also supported
 
 ## Credits
 @uditkarode for [drytypes](https://www.npmjs.com/package/drytypes)
